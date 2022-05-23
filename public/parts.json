@@ -1,0 +1,71 @@
+[
+    {
+      "_id": "1",
+      "name": "45North Helva Pedals",
+      "img": "https://i.ibb.co/m0QmG88/parts-1.jpg",
+      "description": "Thin 9mm body for pedal clearance and weight savings CNC-forged with half-spindle axle",
+      "minimumQuantity": "1000",
+      "availableQuantity": "100000",
+      "price": "10"
+    },
+    {
+      "_id": "2",
+      "name": "FRAMESET 46",
+      "img": "https://i.ibb.co/d4qKvGF/parts-2.jpg",
+      "description": "The S-Works CruX frameset is a 'cross beast, with race-optimized geometry, OSBB, tapered headtube",
+      "minimumQuantity": "500",
+      "availableQuantity": "50000",
+      "price": "120"
+    },
+    {
+      "_id": "3",
+      "name": "FRAMESET 46",
+      "img": "https://i.ibb.co/dbWy74n/parts-3.jpg",
+      "description": "The BOX Four tier is the perfect choice for riders who just want less fuss! You're fond of Prime 9, but know 8 is enough, and surely 11-42T is plenty of range for an 8-speed cassette.",
+      "minimumQuantity": "700",
+      "availableQuantity": "70000",
+      "price": "80"
+    },
+    {
+      "id": "4",
+      "name": "Cinelli Alloy Bullhorn Bar",
+      "img": "https://i.ibb.co/dB0GF82/parts-4.jpg",
+      "description": "31.8mm oversized clamping area with 25mm on each side of clamping area designed to accept clip-on aerobar extensions",
+      "minimumQuantity": "1000",
+      "availableQuantity": "120000",
+      "price": "80"
+    },
+    {
+      "id": "5",
+      "name": "FRONT HUB",
+      "img": "https://i.ibb.co/s250q6J/parts-5.jpg",
+      "description": "ALL-CITY GO-DEVIL FRONT HUB - 15/12/QR X 100MM, 6-BOLT, BLACK, 28H",
+      "minimumQuantity": "1500",
+      "availableQuantity": "200000",
+      "price": "85"
+    },
+    {
+      "_id": "6",
+      "name": "FRAMESET 46",
+      "img": "https://i.ibb.co/dbWy74n/parts-3.jpg",
+      "description": "The BOX Four tier is the perfect choice for riders who just want less fuss! You're fond of Prime 9, but know 8 is enough, and surely 11-42T is plenty of range for an 8-speed cassette.",
+      "minimumQuantity": "700",
+      "availableQuantity": "70000",
+      "price": "80"
+    }
+  ]
+
+  
+
+
+
+
+  
+  
+  
+ 
+  
+
+
+
+
