@@ -27,7 +27,7 @@
       "price": "80"
     },
     {
-      "id": "4",
+      "_id": "4",
       "name": "Cinelli Alloy Bullhorn Bar",
       "img": "https://i.ibb.co/dB0GF82/parts-4.jpg",
       "description": "31.8mm oversized clamping area with 25mm on each side of clamping area designed to accept clip-on aerobar extensions",
@@ -36,7 +36,7 @@
       "price": "80"
     },
     {
-      "id": "5",
+      "_id": "5",
       "name": "FRONT HUB",
       "img": "https://i.ibb.co/s250q6J/parts-5.jpg",
       "description": "ALL-CITY GO-DEVIL FRONT HUB - 15/12/QR X 100MM, 6-BOLT, BLACK, 28H",

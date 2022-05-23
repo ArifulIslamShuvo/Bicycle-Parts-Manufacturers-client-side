@@ -13,7 +13,7 @@ const Products = () => {
     const sixiproducts = products.slice(0, 6);
 
     return (
-        <div className='px-12'>
+        <div className='px-12 py-10'>
 
             <h2 className='text-4xl text-secondary font-bold text-center my-12'>Available Bicycle parts </h2>
         
