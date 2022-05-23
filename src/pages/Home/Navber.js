@@ -1,11 +1,28 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { signOut } from 'firebase/auth';
+import auth from '../../firebase.init';
 
 const Navber = () => {
+    const [user, loading, error] = useAuthState(auth);
+    const navigate = useNavigate();
+
+    const logout = () => {
+        signOut(auth);
+        localStorage.removeItem('accessToken');
+        navigate('/')
+    };
     const menuItems = <>
     <li><Link to="/">Home</Link></li>
     <li><Link to="/about">About</Link></li>
-    <li><Link to="/login">Login</Link></li>
+    {
+        user
+        ?
+        <button className='btn btn-secondary ml-1' onClick={logout}>Logout</button>
+        :
+        <li><Link to="/login">Login</Link></li>  
+    }
     </>
 return (
     <div className="navbar bg-base-100">
