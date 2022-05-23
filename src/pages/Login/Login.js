@@ -1,14 +1,20 @@
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate} from 'react-router-dom';
 import Loading from '../Shared/Loading';
+import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 
 const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
+
+    // ---------Reset-password---------//
+    const [email, setEmail] = useState('');
+    const [sendPasswordResetEmail, resetError] = useSendPasswordResetEmail(auth);
     //-------------signInWithEmailAndPassword-------------------/
     const [
         signInWithEmailAndPassword,
@@ -66,6 +72,7 @@ const Login = () => {
                                             message: 'Provide a valid Email'
                                         }
                                     })}
+                                    onChange={(e) => setEmail(e.target.value)}
                                 />
                                 <label className="label">
                                     {errors.email?.type === 'required' && <span className="label-text-alt text-red-500">{errors.email.message}</span>}
@@ -92,7 +99,10 @@ const Login = () => {
                                     })}
                                 />
                                 
-                                <p className='text-sm text-secondary cursor-pointer'>Forgot Password ?</p>
+                                <p className='text-sm text-secondary cursor-pointer mt-3' onClick={async () => {
+                                    await sendPasswordResetEmail(email);
+                                    toast('Send Email...');
+                                }}>Forgot Password ?</p>
 
                                 <label className="label">
                                     {errors.password?.type === 'required' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
