@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { signOut } from 'firebase/auth';
 import auth from '../../firebase.init';
+import Loading from '../Shared/Loading';
 
 const Navber = () => {
     const [user, loading, error] = useAuthState(auth);
@@ -12,9 +13,16 @@ const Navber = () => {
         signOut(auth);
         navigate('/')
     };
+
+    if(loading){
+        return <Loading />
+    }
+
     const menuItems = <>
     <li><Link to="/">Home</Link></li>
     <li><Link to="/about">About</Link></li>
+    <li><Link to="/about">About</Link></li>
+    <li><Link to="/purchase">Purchase</Link></li>
     {
         user
         ?
