@@ -7,40 +7,40 @@ const BusninessSummary = () => {
     return (
         <div className='pb-12'>
             <h2 className='text-center text-primary text-4xl py-5'>Busniness Summary</h2>
-            <div class="stats shadow">
-                <div class="stat">
-                    <div class="stat-figure text-secondary">
-                        <div class="w-12 rounded-full">
+            <div className="stats shadow">
+                <div className="stat">
+                    <div className="stat-figure text-secondary">
+                        <div className="w-12 rounded-full">
                             <img src={annul} />
                         </div>
                     </div>
-                    <div class="stat-title">Annual revenue</div>
-                    <div class="stat-value text-primary">45K+</div>
-                    <div class="stat-desc">21% more than last month</div>
+                    <div className="stat-title">Annual revenue</div>
+                    <div className="stat-value text-primary">45K+</div>
+                    <div className="stat-desc">21% more than last month</div>
                 </div>
 
-                <div class="stat">
-                    <div class="stat-figure text-secondary">
-                        <div class="w-12 rounded-full">
+                <div className="stat">
+                    <div className="stat-figure text-secondary">
+                        <div className="w-12 rounded-full">
                             <img src={review} />
                         </div>
                     </div>
-                    <div class="stat-title"> Reviews</div>
-                    <div class="stat-value text-secondary">50k+</div>
-                    <div class="stat-desc">12% more than last month</div>
+                    <div className="stat-title"> Reviews</div>
+                    <div className="stat-value text-secondary">50k+</div>
+                    <div className="stat-desc">12% more than last month</div>
                 </div>
 
-                <div class="stat">
-                    <div class="stat-figure text-secondary">
-                        <div class="avatar online">
-                            <div class="w-12 rounded-full">
+                <div className="stat">
+                    <div className="stat-figure text-secondary">
+                        <div className="avatar online">
+                            <div className="w-12 rounded-full">
                                 <img src={customers} />
                             </div>
                         </div>
                     </div>
-                    <div class="stat-title">we served</div>
-                    <div class="stat-value text-orange-600">100+</div>
-                    <div class="stat-desc text-secondary">customers</div>
+                    <div className="stat-title">we served</div>
+                    <div className="stat-value text-orange-600">100+</div>
+                    <div className="stat-desc text-secondary">customers</div>
                 </div>
             </div>
         </div>
