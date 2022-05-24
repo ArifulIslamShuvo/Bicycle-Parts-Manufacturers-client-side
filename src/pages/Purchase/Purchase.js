@@ -28,13 +28,14 @@ const Purchase = () => {
         const partsId = _id;
         const partsName = name;
         const userName = user?.displayName;
+        const userEmail = user?.email;
         const phone = event.target.phone.value;
         const address = event.target.address.value;
         const quantity = event.target.quantity.value;
         const PerUnitPrice = price;
 
-        const order = { partsId, partsName, userName, phone, address, PerUnitPrice, quantity };
-       
+        const order = { partsId, partsName, userName, userEmail, phone, address, PerUnitPrice, quantity };
+
 
         if (parseInt(quantity) < parseInt(minimumQuantity) || parseInt(quantity) > parseInt(availableQuantity)) {
             const erreormessage = <p className='text-red-600 text-center text-sm'>minimum order {minimumQuantity} pieces nad Maximum order {availableQuantity}</p>
@@ -78,9 +79,9 @@ const Purchase = () => {
 
                         <input type="text" name='name' readOnly value={user?.displayName} className="input input-bordered input-secondary w-full max-w-xs" />
                         <input type="email" name='email' readOnly value={user?.email} className="input input-bordered input-secondary w-full max-w-xs" />
-                        <input type="text" name='phone' placeholder="Phone Number" className="input input-bordered input-secondary w-full max-w-xs" />
-                        <input type="text" name='address' placeholder="Address" className="input input-bordered input-secondary w-full max-w-xs" />
-                        <input type="number" name='quantity' placeholder=" Order Quantity" className="input input-bordered input-secondary w-full max-w-xs" />
+                        <input type="text" name='phone' placeholder="Phone Number" required className="input input-bordered input-secondary w-full max-w-xs" />
+                        <input type="text" name='address' placeholder="Address" required className="input input-bordered input-secondary w-full max-w-xs" />
+                        <input type="number" name='quantity' placeholder=" Order Quantity" required className="input input-bordered input-secondary w-full max-w-xs" />
                         {qerror}
                         <input type="submit" value="Place Order" className="btn btn-secondary w-full max-w-xs" />
                     </form>

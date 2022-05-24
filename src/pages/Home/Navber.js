@@ -19,19 +19,22 @@ const Navber = () => {
     }
 
     const menuItems = <>
-    <li><Link to="/">Home</Link></li>
-    <li><Link to="/about">About</Link></li>
-    <li><Link to="/about">About</Link></li>
+    <li><Link className='font-bold mr-2' to="/">Home</Link></li>
+    <li><Link className='font-bold mr-2' to="/about">About</Link></li>
+    <li><Link className='font-bold mr-2' to="/about">About</Link></li>
+    {
+        user && <li><Link className='font-bold mr-2' to="/dashboard">Dashboard</Link></li>
+    }
     {
         user
         ?
         <button className='btn btn-secondary ml-1' onClick={logout}>Logout</button>
         :
-        <li><Link to="/login">Login</Link></li>  
+        <li><Link className='font-bold mr-2' to="/login">Login</Link></li>  
     }
     </>
 return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-green-100 px-12">
         <div className="navbar-start">
             <div className="dropdown">
                 <label   tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -41,7 +44,7 @@ return (
                 {menuItems}
                 </ul>
             </div>
-            <a className="btn btn-ghost normal-case text-xl">bikeparts</a>
+            <a className="btn btn-ghost normal-case text-2xl text-rose-700">Bike <span className='text-green-400'>parts</span></a>
         </div>
         <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal p-0">
