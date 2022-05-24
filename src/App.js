@@ -15,9 +15,10 @@ function App() {
       <Navber />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/purchase" element={<RequireAuth><Purchase /></RequireAuth>}/>
+        <Route path="/home/:id" element={<RequireAuth><Purchase /></RequireAuth>}/>
       </Routes>
       <ToastContainer />
     </div>

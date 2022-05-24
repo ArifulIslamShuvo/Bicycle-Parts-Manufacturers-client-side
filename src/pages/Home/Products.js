@@ -5,11 +5,10 @@ import bgImg from '../../images/banner300.jpg'
 const Products = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('parts.json')
+        fetch('http://localhost:5000/partses')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, []);
-    console.log(products);
     const sixiproducts = products.slice(0, 6);
 
     return (

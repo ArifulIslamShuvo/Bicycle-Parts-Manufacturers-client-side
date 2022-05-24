@@ -24,7 +24,7 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
 
     let signInError;
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
