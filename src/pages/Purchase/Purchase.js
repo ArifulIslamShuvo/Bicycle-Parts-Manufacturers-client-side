@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const Purchase = () => {
@@ -11,7 +12,7 @@ const Purchase = () => {
     const { id } = useParams();
 
     const [parts, setParts] = useState({});
-    const { name, img, description, minimumQuantity, availableQuantity, price } = parts;
+    const { _id, name, img, description, minimumQuantity, availableQuantity, price } = parts;
 
     useEffect(() => {
         fetch(`http://localhost:5000/partses/${id}`)
@@ -20,39 +21,72 @@ const Purchase = () => {
 
     }, [id, parts]);
 
-    const handleBooking = event => {
+    const [qerror, setQerror] = useState('');
+
+    const handleOrder = event => {
         event.preventDefault();
+        const partsId = _id;
+        const partsName = name;
+        const userName = user?.displayName;
         const phone = event.target.phone.value;
+        const address = event.target.address.value;
+        const quantity = event.target.quantity.value;
+        const PerUnitPrice = price;
+
+        const order = { partsId, partsName, userName, phone, address, PerUnitPrice, quantity };
+       
+
+        if (parseInt(quantity) < parseInt(minimumQuantity) || parseInt(quantity) > parseInt(availableQuantity)) {
+            const erreormessage = <p className='text-red-600 text-center text-sm'>minimum order {minimumQuantity} pieces nad Maximum order {availableQuantity}</p>
+            setQerror(erreormessage);
+        }
+        else {
+            setQerror('')
+
+            const url = `http://localhost:5000/order`;
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(order)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data) {
+                        toast.success(" Order Successfully");
+                    }
+                })
+        }
     }
 
 
     return (
+        <div className='flex h-screen justify-center items-center my-10'>
+            <div className="card w-96 bg-base-100 shadow-xl">
+                <div className="card-body">
+                    <h2 className="text-center text-2xl font-bold text-secondary">Order Form</h2>
+                    <hr />
 
-            <div className='flex h-screen justify-center items-center my-5'>
-                <div className="card w-96 bg-base-100 shadow-xl">
-                    <div className="card-body">
-                        <h2 className="text-center text-2xl font-bold text-secondary">Purchase</h2>
-                        <hr />
+                    <form onSubmit={handleOrder} className='grid grid-cols-1 gap-3 justify-items-center mt-5'>
 
-                        <form onSubmit={handleBooking} className='grid grid-cols-1 gap-3 justify-items-center mt-5'>
-                        
-                            <h6 className='card-title text-base '><span className='text-orange-600'>Parts Name :</span> {name}</h6>
-                            <h6 className='card-title text-base '><span className='text-orange-600'>Minimum Quantity:</span> {minimumQuantity}</h6>
-                            <h6 className='card-title text-base '><span className='text-orange-600'>Available Quantity:</span> {availableQuantity}</h6>
-                            <h6 className='card-title text-base '><span className='text-orange-600'>Price: $</span> {price}</h6>
-                            <h6 className='card-title text-xs text-left'>{description}</h6>
+                        <h6 className='card-title text-base '><span className='text-orange-600'>Parts Name :</span> {name}</h6>
+                        <h6 className='card-title text-xs'><span className='text-orange-600'>Minimum Quantity:</span> {minimumQuantity}</h6>
+                        <h6 className='card-title text-xs'><span className='text-orange-600'>Available Quantity:</span> {availableQuantity}</h6>
+                        <h6 className='card-title text-xs'><span className='text-orange-600'>Per Unit Price:</span> $ {price}</h6>
+                        <h6 className='card-title text-xs text-left'>{description}</h6>
 
-                            <input type="email" name='email' readOnly value={user?.displayName} className="input input-bordered input-secondary w-full max-w-xs" />
-                            <input type="email" name='email' readOnly value={user?.email} className="input input-bordered input-secondary w-full max-w-xs" />
-                            <input type="text" name='phone' placeholder="Phone Number" className="input input-bordered input-secondary w-full max-w-xs" />
-                            <input type="text" name='address' placeholder="Address" className="input input-bordered input-secondary w-full max-w-xs" />
-                            <input type="number" name='quantity' placeholder=" Order Quantity" className="input input-bordered input-secondary w-full max-w-xs" />
-                            
-                            <input type="submit" value="Order" className="btn btn-secondary w-full max-w-xs" />
-                        </form>
-                    </div>
+                        <input type="text" name='name' readOnly value={user?.displayName} className="input input-bordered input-secondary w-full max-w-xs" />
+                        <input type="email" name='email' readOnly value={user?.email} className="input input-bordered input-secondary w-full max-w-xs" />
+                        <input type="text" name='phone' placeholder="Phone Number" className="input input-bordered input-secondary w-full max-w-xs" />
+                        <input type="text" name='address' placeholder="Address" className="input input-bordered input-secondary w-full max-w-xs" />
+                        <input type="number" name='quantity' placeholder=" Order Quantity" className="input input-bordered input-secondary w-full max-w-xs" />
+                        {qerror}
+                        <input type="submit" value="Place Order" className="btn btn-secondary w-full max-w-xs" />
+                    </form>
                 </div>
             </div>
+        </div>
     );
 };
 
