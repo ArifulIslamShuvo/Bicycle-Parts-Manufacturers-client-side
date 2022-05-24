@@ -9,9 +9,9 @@ import Product from './pages/Home/Product';
 import Purchase from './pages/Purchase/Purchase';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Dashboard from './pages/Home/Dashboard/Dashboard';
-import MyOrders from './pages/Home/Dashboard/MyOrders';
-import UserReview from './pages/Home/Dashboard/UserReview';
+import Dashboard from './pages/Dashboard/Dashboard';
+import UserReview from './pages//Dashboard/UserReview';
+import MyOrders from './pages/Dashboard/MyOrders';
 
 function App() {
   return (
