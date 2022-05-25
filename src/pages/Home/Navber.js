@@ -11,7 +11,8 @@ const Navber = () => {
 
     const logout = () => {
         signOut(auth);
-        navigate('/')
+        navigate('/');
+        localStorage.removeItem('accessToken');
     };
 
     if (loading) {
