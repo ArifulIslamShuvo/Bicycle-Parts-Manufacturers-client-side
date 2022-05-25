@@ -2,7 +2,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWith
 import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
-import { Link, useLocation, useNavigate} from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../Shared/Loading';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
@@ -28,15 +28,15 @@ const Login = () => {
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
-    if (gUser || user ) {
+    if (gUser || user) {
         navigate(from, { replace: true });
     }
-    if(gLoading || loading){
+    if (gLoading || loading) {
         return <Loading />
     }
 
-    if (gError || error ) {
-        signInError = <p className='text-red-600 text-center text-sm'>{gError?.message || error?.message}</p>
+    if (gError || error || resetError) {
+        signInError = <p className='text-red-600 text-center text-sm'>{gError?.message || error?.message || resetError?.message}</p>
     }
 
     const onSubmit = data => {
@@ -98,7 +98,7 @@ const Login = () => {
                                         }
                                     })}
                                 />
-                                
+
                                 <p className='text-sm text-secondary cursor-pointer mt-3' onClick={async () => {
                                     await sendPasswordResetEmail(email);
                                     toast('Send Email...');
