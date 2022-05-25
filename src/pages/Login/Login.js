@@ -4,8 +4,10 @@ import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../Shared/Loading';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
+import useToken from '../../hooks/useToken';
+
 
 
 const Login = () => {
@@ -22,15 +24,19 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    const [token] = useToken(user || gUser);
 
     let signInError;
     const navigate = useNavigate();
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
-
-    if (gUser || user) {
-        navigate(from, { replace: true });
-    }
+  
+    useEffect(() => {
+        if (token) {
+            navigate(from, { replace: true });
+        }
+    },[token, from, navigate])
+   
     if (gLoading || loading) {
         return <Loading />
     }
