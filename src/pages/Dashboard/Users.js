@@ -4,10 +4,10 @@ import Loading from '../Shared/Loading';
 import UserRow from './UserRow';
 
 const Users = () => {
-    const { data: users, isLoading } = useQuery('user', () => fetch('http://localhost:5000/user', {
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user', {
         method: 'GET',
         headers: {
-            'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+            authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }
     }).then(res => res.json()));
 
@@ -16,20 +16,25 @@ const Users = () => {
     }
     return (
         <div>
-            <h2 className="text-center text-xl font-bold text-red-200 mt-4">All Users :{users.length}</h2>
+            <h2 className="text-center text-xl font-bold text-rose-500 mt-4">All Users :{users.length}</h2>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>
                         <tr>
                             <th></th>
                             <th>Email</th>
-                            <th>Make</th>
-                            <th>Remove</th>
+                            <th>Make Role</th>
+                            <th>Delet</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            users.map((user, index) => <UserRow index={index} key={user._id} user={user}></UserRow>)
+                            users.map((user, index) => <UserRow 
+                            index={index}
+                             key={user._id} 
+                             user={user}
+                             refetch={refetch}
+                             ></UserRow>)
                         }
                     </tbody>
                 </table>
