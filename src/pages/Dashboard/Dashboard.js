@@ -14,6 +14,7 @@ const Dashboard = () => {
                 <ul className="p-4 overflow-y-auto w-48 bg-base-100 text-base-content">
                     <li><Link to='/dashboard/'><button className="mt-3 btn-success btn btn-sm">My Orders</button></Link></li>
                     <li><Link to='/dashboard/userreview'><button className="mt-3 btn-success btn btn-sm">User Reviews</button></Link></li>
+                    <li><Link to='/dashboard/users'><button className="mt-3 btn-success btn btn-sm">All Users</button></Link></li>
                     
 
                 </ul>
