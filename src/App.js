@@ -14,6 +14,11 @@ import UserReview from './pages//Dashboard/UserReview';
 import MyOrders from './pages/Dashboard/MyOrders';
 import Users from './pages/Dashboard/Users';
 import RequireAdmin from './pages/Login/RequireAdmin';
+import AddProduct from './pages/Dashboard/AddProduct';
+import ManageProducts from './pages/Dashboard/ManageProducts';
+import ManageAllOrders from './pages/Dashboard/ManageAllOrders';
+import MyProfile from './pages/Dashboard/MyProfile';
+import Blog from './pages/Blog.js/Blog';
 
 function App() {
   return (
@@ -22,6 +27,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/product" element={<Product />} />
@@ -30,6 +36,10 @@ function App() {
           <Route index element={<MyOrders />} />
           <Route path="userreview" element={<UserReview />} />
           <Route path="users" element={<RequireAdmin><Users /></RequireAdmin>}></Route>
+          <Route path="addproduct" element={<AddProduct />} />
+          <Route path="manageproducts" element={<ManageProducts />} />
+          <Route path="manageallorders" element={<ManageAllOrders />} />
+          <Route path="myprofile" element={<MyProfile />} />
         </Route>
       </Routes>
       <ToastContainer />

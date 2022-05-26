@@ -8,7 +8,7 @@ const Dashboard = () => {
     const [user] = useAuthState(auth)
     const [admin] = useAdmin(user)
     return (
-        <div className="drawer drawer-mobile mt-3">
+        <div className="drawer drawer-mobile mt-3 mx-2">
             <input id="dashboard-sidebar" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content">
                 <h2 className='text-3xl font-bold text-cyan-400 text-center'>Welcome to your Dashboard</h2>
@@ -16,11 +16,24 @@ const Dashboard = () => {
             </div>
             <div className="drawer-side">
                 <label htmlFor="dashboard-sidebar" className="drawer-overlay"></label>
-                <ul className="p-4 overflow-y-auto w-48 bg-base-100 text-base-content">
-                    <li><Link to='/dashboard/'><button className="mt-3 btn-success btn btn-sm">My Orders</button></Link></li>
-                    <li><Link to='/dashboard/userreview'><button className="mt-3 btn-success btn btn-sm">User Reviews</button></Link></li>
-                    {
-                    admin && <li><Link to='/dashboard/users'><button className="mt-3 btn-success btn btn-sm">All Users</button></Link></li>
+                <ul className="p-6 mt-12 overflow-y-auto  bg-base-100 text-base-content">
+
+                    {!admin &&
+                        <>
+                            <li><Link to='/dashboard/'><button className="mt-3 btn-success btn btn-xs">My Orders</button></Link></li>
+                            <li><Link to='/dashboard/userreview'><button className="mt-3 btn-success btn btn-xs">User Reviews</button></Link></li>
+                        </>
+                    }
+
+                    <li><Link to='/dashboard/myprofile'><button className="mt-3 btn-success btn btn-xs">My Profile</button></Link></li>
+                   
+                    {admin &&
+                        <>
+                            <li><Link to='/dashboard/manageproducts'><button className="mt-3 btn-success btn btn-xs">Manage Products</button></Link></li>
+                            <li><Link to='/dashboard/manageallorders'><button className="mt-3 btn-success btn btn-xs">Manage All Orders</button></Link></li>
+                            <li><Link to='/dashboard/addproduct'><button className="mt-3 btn-success btn btn-xs">Add Product</button></Link></li>
+                            <li><Link to='/dashboard/users'><button className="mt-3 btn-success btn btn-xs">All Users</button></Link></li>
+                        </>
                     }
 
                 </ul>

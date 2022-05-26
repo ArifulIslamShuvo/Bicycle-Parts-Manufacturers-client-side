@@ -21,8 +21,7 @@ const Navber = () => {
 
     const menuItems = <>
         <li><Link className='font-bold mr-2' to="/">Home</Link></li>
-        <li><Link className='font-bold mr-2' to="/about">About</Link></li>
-        <li><Link className='font-bold mr-2' to="/about">About</Link></li>
+        <li><Link className='font-bold mr-2' to="/blog">Blog</Link></li>
         {
             user && <li><Link className='font-bold mr-2' to="/dashboard">Dashboard</Link></li>
         }
