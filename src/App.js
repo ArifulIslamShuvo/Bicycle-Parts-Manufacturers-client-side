@@ -19,6 +19,7 @@ import ManageProducts from './pages/Dashboard/ManageProducts';
 import ManageAllOrders from './pages/Dashboard/ManageAllOrders';
 import MyProfile from './pages/Dashboard/MyProfile';
 import Blog from './pages/Blog.js/Blog';
+import Reviews from './pages/Home/Reviews';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/reviews" element={<Reviews />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />

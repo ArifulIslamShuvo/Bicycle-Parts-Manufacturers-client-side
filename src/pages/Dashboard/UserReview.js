@@ -12,9 +12,9 @@ const UserReview = () => {
         event.preventDefault();
         const userName = user?.displayName;
         const rating = event.target.rating.value;
-        const adddescriptionress = event.target.description.value;
+        const description = event.target.description.value;
 
-        const review = { userName, rating, adddescriptionress };
+        const review = { userName, rating, description };
         console.log(review);
 
         const url = `http://localhost:5000/review`;
@@ -49,7 +49,7 @@ const UserReview = () => {
                                 </label>
                                 <input type="text" name='name' readOnly value={user?.displayName} className="input input-bordered input-secondary w-full max-w-lg" />
                             </div>
-                            <select name="rating" class="input input-bordered input-secondary w-full max-w-lg">
+                            <select name="rating" className="input input-bordered input-secondary w-full max-w-lg">
                                 <option disabled selected>
                                     Rating
                                 </option>
