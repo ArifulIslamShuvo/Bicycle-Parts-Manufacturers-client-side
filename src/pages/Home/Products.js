@@ -9,7 +9,7 @@ const Products = () => {
             .then(res => res.json())
             .then(data => setProducts(data));
     }, []);
-    const sixiproducts = products.slice(0, 6);
+    const sixiproducts = products.slice(-6);
 
     return (
         <div className='px-12 py-10'>
@@ -28,3 +28,4 @@ const Products = () => {
 };
 
 export default Products;
+

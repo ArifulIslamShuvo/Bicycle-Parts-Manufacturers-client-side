@@ -31,8 +31,6 @@ const UserReview = () => {
                     toast.success(" Order Successfully");
                 }
             })
-
-
     }
     return (
         <div style={{
