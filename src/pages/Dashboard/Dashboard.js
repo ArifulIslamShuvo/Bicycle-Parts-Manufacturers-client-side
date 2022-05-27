@@ -21,7 +21,7 @@ const Dashboard = () => {
                     {!admin &&
                         <>
                             <li><Link to='/dashboard/'><button className="mt-3 btn-success btn btn-xs">My Orders</button></Link></li>
-                            <li><Link to='/dashboard/userreview'><button className="mt-3 btn-success btn btn-xs">User Reviews</button></Link></li>
+                            <li><Link to='/dashboard/userreview'><button className="mt-3 btn-success btn btn-xs">Add Review</button></Link></li>
                         </>
                     }
 
