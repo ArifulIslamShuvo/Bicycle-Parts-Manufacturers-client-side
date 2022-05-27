@@ -22,7 +22,7 @@ const ManageProducts = () => {
                     }
                 </div>
                 {
-                    deletProduct && <ManageDeletModal deletProduct={deletProduct}></ManageDeletModal>
+                    deletProduct && <ManageDeletModal deletProduct={deletProduct} setParts={setParts}></ManageDeletModal>
                 }
             </div>
         </div>
