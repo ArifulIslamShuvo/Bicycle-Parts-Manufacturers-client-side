@@ -20,6 +20,8 @@ import ManageAllOrders from './pages/Dashboard/ManageAllOrders';
 import MyProfile from './pages/Dashboard/MyProfile';
 import Blog from './pages/Blog.js/Blog';
 import Reviews from './pages/Home/Reviews';
+import MyPortfolio from './pages/Portfolio/MyPortfolio';
+import NotFound from './pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -30,6 +32,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/portfolio" element={<MyPortfolio />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/product" element={<Product />} />
@@ -43,6 +46,7 @@ function App() {
           <Route path="manageallorders" element={<ManageAllOrders />} />
           <Route path="myprofile" element={<MyProfile />} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <ToastContainer />
     </div>
