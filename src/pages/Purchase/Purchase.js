@@ -15,7 +15,7 @@ const Purchase = () => {
     const { _id, name, img, description, minimumQuantity, availableQuantity, price } = parts;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/partses/${id}`)
+        fetch(`https://mighty-oasis-11967.herokuapp.com/partses/${id}`)
             .then(res => res.json())
             .then(data => setParts(data));
 
@@ -44,7 +44,7 @@ const Purchase = () => {
         else {
             setQerror('')
 
-            const url = `http://localhost:5000/order`;
+            const url = `https://mighty-oasis-11967.herokuapp.com/order`;
             fetch(url, {
                 method: 'POST',
                 headers: {

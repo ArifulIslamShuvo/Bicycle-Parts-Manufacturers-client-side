@@ -5,7 +5,7 @@ import bgImg from '../../images/banner300.jpg'
 const Products = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/partses')
+        fetch('https://mighty-oasis-11967.herokuapp.com/partses')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, []);

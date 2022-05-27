@@ -4,7 +4,7 @@ import bg from '../../images/bg-2.jpg'
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/review')
+        fetch('https://mighty-oasis-11967.herokuapp.com/review')
             .then(res => res.json())
             .then(data => setReviews(data));
     }, []);

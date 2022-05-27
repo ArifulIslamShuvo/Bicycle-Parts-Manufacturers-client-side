@@ -124,6 +124,7 @@ const MyPortfolio = () => {
                 <div className="card w-50 shadow-xl bg-slate-800">
                     <div className="card-body items-center text-center">
                         <h2 className="card-title text-2xl text-secondary">My Projects Link</h2>
+                        <hr className='w-full border-2 border-white my-3' />
                         <a className='text-blue-600' href="https://illustrious-cocada-d468af.netlify.app/">Furniture Industry Management</a>
                         <a className='text-blue-600' href="https://effortless-crisp-2ce00e.netlify.app/">Customer Reviews</a>
                         <a className='text-blue-600' href="https://remarkable-gaufre-0ef67b.netlify.app/">Awesome Photography</a>

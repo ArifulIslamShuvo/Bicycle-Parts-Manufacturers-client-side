@@ -16,7 +16,7 @@ const AddProduct = () => {
         const products = { name, img, minimumQuantity, availableQuantity, price, description};
         console.log(products);
 
-        const url = `http://localhost:5000/partses`;
+        const url = `https://mighty-oasis-11967.herokuapp.com/partses`;
         fetch(url, {
             method: 'POST',
             headers: {

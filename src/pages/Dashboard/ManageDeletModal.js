@@ -8,7 +8,7 @@ const ManageDeletModal = ({ deletProduct,setParts }) => {
 
 
     const deletModal = (id) => {
-            const url = `http://localhost:5000/partses/${id}`;
+            const url = `https://mighty-oasis-11967.herokuapp.com/partses/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

@@ -17,7 +17,7 @@ const UserReview = () => {
         const review = { userName, rating, description };
         console.log(review);
 
-        const url = `http://localhost:5000/review`;
+        const url = `https://mighty-oasis-11967.herokuapp.com/review`;
         fetch(url, {
             method: 'POST',
             headers: {
