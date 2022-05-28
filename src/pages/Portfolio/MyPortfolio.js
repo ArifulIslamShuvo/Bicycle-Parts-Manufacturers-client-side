@@ -64,7 +64,7 @@ const MyPortfolio = () => {
                         <img src={icon3} alt="Shoes" className="rounded-xl" />
                     </figure>
                     <div className="card-body items-center text-center">
-                        <h2 className="card-title">Tailwind</h2>
+                        <h2 className="card-title">Tailwind CSS</h2>
                     </div>
                 </div>
 

@@ -11,7 +11,7 @@ const Dashboard = () => {
         <div className="drawer drawer-mobile mt-3 mx-2">
             <input id="dashboard-sidebar" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content">
-                <h2 className='text-3xl font-bold text-cyan-400 text-center'>Welcome to your Dashboard</h2>
+                <h2 className='text-3xl font-bold text-cyan-400 text-center mb-3'>Welcome to your Dashboard</h2>
                 <Outlet />
             </div>
             <div className="drawer-side">
@@ -20,12 +20,12 @@ const Dashboard = () => {
 
                     {!admin &&
                         <>
-                            <li><Link to='/dashboard/'><button className="mt-3 btn-success btn btn-xs">My Orders</button></Link></li>
+                            <li><Link to='/dashboard/'><button className="mt-3 btn-success btn btn-xs">My Profile</button></Link></li>
                             <li><Link to='/dashboard/userreview'><button className="mt-3 btn-success btn btn-xs">Add Review</button></Link></li>
                         </>
                     }
 
-                    <li><Link to='/dashboard/myprofile'><button className="mt-3 btn-success btn btn-xs">My Profile</button></Link></li>
+                    <li><Link to='/dashboard/MyOrders'><button className="mt-3 btn-success btn btn-xs">MyOrders</button></Link></li>
                    
                     {admin &&
                         <>
