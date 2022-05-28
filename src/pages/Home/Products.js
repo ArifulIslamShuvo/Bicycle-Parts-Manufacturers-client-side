@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Product from './Product';
-import bgImg from '../../images/banner300.jpg'
 
 const Products = () => {
     const [products, setProducts] = useState([]);

@@ -31,7 +31,7 @@ const ManageDeletModal = ({ deletProduct,setParts }) => {
                 <div className="modal-box">
                     <label htmlFor="delet-product-modual" className="btn btn-sm btn-circle btn-secondary absolute right-2 top-2 text-white">✕</label>
                     <h3 className="font-bold text-md text-secondary">Are You Sure to delet for: {name} </h3>
-                    <button onClick={() => deletModal(_id)} className="btn btn-sm w-100 px-10 mt-12 btn-error rounded-2xl text-white bg-secondary">DELET</button>
+                    <button onClick={() => deletModal(_id)} className="btn btn-sm w-100 px-10 mt-12 btn-error rounded-2xl text-white bg-secondary">Yes</button>
 
                 </div>
             </div>

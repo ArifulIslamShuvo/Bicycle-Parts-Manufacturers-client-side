@@ -44,14 +44,6 @@ const Blog = () => {
                             <p className='text-left'>React uses several clever techniques to minimize the number of costly DOM operations required to update the UI.To optimize React rendering, you need to make sure that components receive only necessary props. It will let you control the CPU consumption and avoid over-rendering unnecessary features. Avoid inline functions as much as possible. Always render hidden components like Modals and Dropdowns conditionally. Always call multiple APIs parallelly</p>
                         </div>
                     </div>
-
-                    <div className="card w-100 bg-primary">
-                        <div className="card-body">
-                            <h2 className="card-title">Card title!</h2>
-                            <p className='text-left'>If a dog chews shoes whose shoes does he choose?</p>
-
-                        </div>
-                    </div>
                 </div>
             </div>
             <Footer />

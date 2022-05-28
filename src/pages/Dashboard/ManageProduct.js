@@ -20,7 +20,7 @@ const ManageProduct = ({ product, setDeletProduct }) => {
                         htmlFor="delet-product-modual"
                         onClick={() => setDeletProduct(product)}
                         className="btn btn-sm relative w-full btn-error rounded-2xl text-white uppercase bg-gradient-to-r from-red-500 to-red-500"
-                    >DELET</label>
+                    >DELETE</label>
                 </div>
             </div>
         </div>
