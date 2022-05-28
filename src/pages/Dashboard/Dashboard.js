@@ -20,12 +20,12 @@ const Dashboard = () => {
 
                     {!admin &&
                         <>
-                            <li><Link to='/dashboard/'><button className="mt-3 btn-success btn btn-xs">My Profile</button></Link></li>
+        
                             <li><Link to='/dashboard/userreview'><button className="mt-3 btn-success btn btn-xs">Add Review</button></Link></li>
+                            <li><Link to='/dashboard/MyOrders'><button className="mt-3 btn-success btn btn-xs">MyOrders</button></Link></li>
                         </>
                     }
-
-                    <li><Link to='/dashboard/MyOrders'><button className="mt-3 btn-success btn btn-xs">MyOrders</button></Link></li>
+                    <li><Link to='/dashboard/'><button className="mt-3 btn-success btn btn-xs">My Profile</button></Link></li>
                    
                     {admin &&
                         <>

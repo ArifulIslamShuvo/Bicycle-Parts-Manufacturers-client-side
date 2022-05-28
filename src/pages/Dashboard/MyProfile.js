@@ -3,8 +3,6 @@ import bg from '../../images/up.jpg';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { toast } from 'react-toastify';
-import { useQuery } from 'react-query';
-import Loading from '../Shared/Loading';
 
 const MyProfile = () => {
     const [user, loading, error] = useAuthState(auth);
@@ -33,7 +31,7 @@ const MyProfile = () => {
             .then(data => {
                 console.log('data', data);
                 toast.success('Update successful')
-                event.reset();
+                event.value.reset();
             })
     }
     return (
