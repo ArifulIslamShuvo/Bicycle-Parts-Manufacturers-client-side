@@ -13,7 +13,7 @@ const Reviews = () => {
 
     return (
         <div>
-            <h2 className='text-4xl text-secondary font-bold text-center my-12'>User Reviews</h2>
+            <h2 className='text-4xl text-secondary font-bold text-center my-12 text-[#01151F]'>User Reviews</h2>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 m-5 pb-5'>
                 {
                     reviews.slice(-3).map(review => <div key={review._id}>

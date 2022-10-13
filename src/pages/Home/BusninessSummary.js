@@ -6,7 +6,7 @@ import annul from '../../images/icon/Annual.png'
 const BusninessSummary = () => {
     return (
         <div className='pb-12'>
-            <h2 className='text-4xl text-secondary font-bold text-center my-12'>Busniness Summary</h2>
+            <h2 className='text-4xl text-[#01151F] font-bold text-center my-12'>Busniness Summary</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-24'>
                 <div className='text-center shadow-2xl rounded-lg'>
                     <div className="stat">

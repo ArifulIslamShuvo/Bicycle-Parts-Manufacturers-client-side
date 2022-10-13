@@ -5,7 +5,8 @@ import { FiArrowRight } from 'react-icons/fi';
 
 const Help = () => {
     return (
-        <div className='flex gap-48 justify-center  flex-col lg:flex-row py-32'>
+        <div>
+            <div className='flex gap-40 justify-center  flex-col lg:flex-row py-32'>
             <div>
                 <h2 className='text-5xl font-semibold pb-10 text-left'>Need help?</h2>
                 <div>
@@ -27,7 +28,7 @@ const Help = () => {
                             <small>Support Email</small>
                         </div>
                     </div>
-                    <div className=' p-2 flex justify-start items-center gap-2 text-left text-primary'>
+                    <div className=' p-2 flex justify-start items-center gap-2 text-left text-secondary'>
                         <p>Support</p>
                         <FiArrowRight />
                     </div>
@@ -61,6 +62,7 @@ const Help = () => {
                 </details>
             </div>
 
+        </div>
         </div>
     );
 };

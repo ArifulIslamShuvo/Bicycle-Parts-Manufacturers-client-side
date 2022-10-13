@@ -11,8 +11,10 @@ const Product = ({ product }) => {
 
     return (
 
-        <div className="card  bg-base-100 shadow-xl">
-            <figure><img className="p-12" src={img} alt="" /></figure>
+        <div className="card  bg-[#01151F] shadow-xl text-white">
+            <div className='pt-10'>
+                <img className="rounded-xl w-72 mx-auto" src={img} alt="" />
+            </div>
             <div className="card-body decoration-from-font">
                 <div>
                     <hr />
@@ -24,7 +26,7 @@ const Product = ({ product }) => {
                 <h6 className='card-title text-xs text-left'>{description}</h6>
                 <div className="card-actions mt-3">
                     <button className="btn btn-outline btn-success btn-sm btn-ctnter"
-                    onClick={() =>navigateProduct (_id)}>Buy Now</button>
+                        onClick={() => navigateProduct(_id)}>Buy Now</button>
                 </div>
             </div>
         </div>

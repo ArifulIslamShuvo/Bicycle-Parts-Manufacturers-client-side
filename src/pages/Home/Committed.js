@@ -10,7 +10,7 @@ const Committed = () => {
             <div class="flex px-12 py-10">
                 <div class="flex-none ...">
                     <div className='px-5'>
-                        <h2 className='text-4xl text-orange-500 font-bold text-left p-5 mt-10'>Committed to Environmental Improvement</h2>
+                        <h2 className='text-4xl text-[#01151F] font-bold text-left p-5 mt-10'>Committed to Environmental Improvement</h2>
                         <p className='m-5 text-left'>-- Continuous practice of environmental management protocols and eco-friendly business guidelines.</p>
                         <p className='m-5 text-left'>-- Work with local and international bodies by complying with established environmental <br /> laws and regulations.</p>
                         <p className='m-5 text-left'>-- Consistent development of eco-friendly goods and services.
