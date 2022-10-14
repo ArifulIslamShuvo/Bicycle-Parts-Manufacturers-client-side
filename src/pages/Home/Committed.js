@@ -26,19 +26,27 @@ const Committed = () => {
                 </div>
                 <div class="flex-1 mt-12">
                     <div className='grid grid-cols-2 lg:grid-cols-2 gap-5'>
-                        <div className='bg-black'>
+                        <div data-aos="fade-down-right"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="2000" className='bg-[#01151F]'>
                             <img className='w-full' src={comitted1} alt="" />
                             <h2 className='text-white py-1'>Raw Materials</h2>
                         </div>
-                        <div className='bg-black'>
+                        <div data-aos="fade-down-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="2000" className='bg-[#01151F]'>
                             <img className='w-full' src={comitted2} alt="" />
                             <h2 className='text-white py-1'>Packing</h2>
                         </div>
-                        <div className='bg-black'>
+                        <div data-aos="fade-up-right"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="2000" className='bg-[#01151F]'>
                             <img className='w-full' src={comitted3} alt="" />
                             <h2 className='text-white py-1'>Logistics</h2>
                         </div>
-                        <div className='bg-black'>
+                        <div data-aos="fade-up-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="2000" className='bg-[#01151F]'>
                             <img className='w-full' src={comitted4} alt="" />
                             <h2 className='text-white py-1'>Waste</h2>
                         </div>

@@ -22,7 +22,7 @@ const BusinessTransactions = () => {
         <div className='p-2'>
             <h2 className='text-5xl font-semibold py-10 text-[#01151F]'>Business Transactions Info.</h2>
             <div className='flex justify-center flex-col lg:flex-row mt-5 gap-10'>
-                <div className='bg-[#01151F]  rounded-2xl w-80'>
+                <div className='bg-[#01151F]  rounded-2xl w-80 mx-auto'>
                     <div className='text-left p-7'>
                         <h2 className='text-2xl font-semibold text-white '>Easy<br />
                             integration</h2>
@@ -54,7 +54,7 @@ const BusinessTransactions = () => {
                     </div>
                 </div>
                 {/* Saving-accounts */}
-                <div className='bg-[#01151F]  rounded-2xl w-80'>
+                <div className='bg-[#01151F]  rounded-2xl w-80 mx-auto'>
                     <div className='text-left p-7'>
                         <h2 className='text-2xl font-semibold text-white '>Upcoming<br />
                             Parts</h2>
@@ -73,7 +73,7 @@ const BusinessTransactions = () => {
                         </div>
                     </div>
                 </div>
-                <div className='bg-[#01151F]  rounded-2xl w-80'>
+                <div className='bg-[#01151F]  rounded-2xl w-80 mx-auto'>
                     <div className='text-left p-7'>
                         <h2 className='text-2xl font-semibold text-white '>Instant<br />transactions</h2>
                         <p className='text-[#c0bebe] mt-2 text-lg'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur</p>
