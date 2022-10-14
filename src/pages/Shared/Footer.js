@@ -11,14 +11,14 @@ const Footer = () => {
             <div>
                 <img src={icon} className="h-[60px] p-2 ml-6" alt='' />
             </div>
-            <footer className="footer px-10 py-5 text-base-content text-white">
-                <div className="text-base">
+            <footer className="footer px-10 py-5 text-base-content">
+                <div className="text-base text-white">
                     <span className="footer-title ">Customer Service</span>
                     <a className="link link-hover hover:text-[#A68959]"> My Account</a>
                     <a className="link link-hover hover:text-[#A68959]">Shipping</a>
                     <a className="link link-hover hover:text-[#A68959]">Guarantee</a>
                 </div>
-                <div className="text-base">
+                <div className="text-base text-white">
                     <span className="footer-title">Connect</span>
                     <a className="link link-hover flex items-center gap-4 hover:text-[#A68959]"><FiPhoneCall /> <span>Call Us +1 720.772.4435</span></a>
                     <a className="link link-hover flex items-center gap-4 hover:text-[#A68959]"><AiOutlineMail /> <span>Send an Email</span></a>
@@ -27,7 +27,7 @@ const Footer = () => {
                     <a className="link link-hover flex items-center gap-4 hover:text-[#A68959]"><AiOutlineYoutube /> <span>Youtube</span></a>
 
                 </div>
-                <div className="text-base">
+                <div className="text-base text-white">
                     <span className="footer-title">Explore</span>
                     <div className='flex gap-5'>
                         <div className='flex flex-col text-left'>
@@ -45,11 +45,11 @@ const Footer = () => {
 
                     </div>
                 </div>
-                <div className="text-base text-whit">
-                    <span className="footer-title">Newsletter</span>
+                <div className="text-base ">
+                    <span className="footer-title text-white">Newsletter</span>
                         <div className="form-control w-80">
                             <label className="label">
-                                <span className="text-whit">Enter your email address</span>
+                                <span className="text-white">Enter your email address</span>
                             </label>
                             <div className="relative text-black">
                                 <input type="text" placeholder="username@site.com" className="input input-bordered w-full pr-16" />
