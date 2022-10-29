@@ -8,7 +8,7 @@ const BlogInfo = ({ blog }) => {
             <div className="hero-overlay"></div>
             <div className='mx-5 -mt-10 bg-white'>
                 <div className="card-body ">
-                    <h2 className="card-title">{title}</h2>
+                    <h2 className="card-title text-[#01151F]">{title}</h2>
                     <p className='whitespace-normal text-left'>{description.slice(0, 200)}...</p>
                 </div>
             </div>
